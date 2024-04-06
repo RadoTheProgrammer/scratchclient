@@ -106,7 +106,7 @@ class CloudConnection(BaseCloudConnection):
             del default_headers["Cookie"]
 
         self._ws.connect(
-            f"wss://{self.cloud_host}",
+            f"ws://{self.cloud_host}",
             headers={**default_headers, **headers},
         )  # connect the websocket
         self._send_packet(
